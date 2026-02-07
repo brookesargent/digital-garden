@@ -12,23 +12,39 @@ const GROWTH_EMOJI: Record<string, string> = {
   evergreen: "\u{1F333}",
 }
 
-export default (() => {
+interface GardenListingOptions {
+  slug: string
+  includeCategories?: string[]
+  excludeCategories?: string[]
+  emptyMessage?: string
+}
+
+export default ((opts: GardenListingOptions) => {
   const GardenListing: QuartzComponent = ({
     allFiles,
     fileData,
     displayClass,
     cfg,
   }: QuartzComponentProps) => {
-    // Only render on the index page
-    if (fileData.slug !== "index") return null
+    if (fileData.slug !== opts.slug) return null
+
+    const staticPages = ["index", "about", "library"]
 
     const publishedNotes = allFiles
       .filter((f) => {
         const fm = f.frontmatter
         if (!fm) return false
         if (fm.publish !== true && fm.publish !== "true") return false
-        // Exclude the index and about pages from the listing
-        if (f.slug === "index" || f.slug === "about") return false
+        if (staticPages.includes(f.slug!)) return false
+
+        const category = (fm.category as string) ?? ""
+        if (opts.includeCategories && opts.includeCategories.length > 0) {
+          if (!opts.includeCategories.includes(category)) return false
+        }
+        if (opts.excludeCategories && opts.excludeCategories.length > 0) {
+          if (opts.excludeCategories.includes(category)) return false
+        }
+
         return true
       })
       .sort(byDateAndAlphabetical(cfg))
@@ -58,10 +74,12 @@ export default (() => {
     const statusOrder = ["seedling", "budding", "evergreen"]
     const sortedStatuses = statusOrder.filter((s) => allStatuses.has(s))
 
+    const showCategoryFilter = !opts.includeCategories && sortedCategories.length > 0
+
     return (
       <div class="garden-listing">
         <div class="garden-filters">
-          {sortedCategories.length > 0 && (
+          {showCategoryFilter && (
             <div class="filter-group">
               <span class="filter-label">Category:</span>
               <div class="filter-buttons" data-filter-type="category">
@@ -109,7 +127,12 @@ export default (() => {
             const description = file.description
 
             return (
-              <div class="garden-note-card" data-tags={tags.join(",")} data-status={status} data-category={category}>
+              <div
+                class="garden-note-card"
+                data-tags={tags.join(",")}
+                data-status={status}
+                data-category={category}
+              >
                 <div class="note-card-header">
                   {status && GROWTH_EMOJI[status] && (
                     <span class="note-status-icon" aria-hidden="true">
@@ -148,7 +171,9 @@ export default (() => {
         </div>
 
         {publishedNotes.length === 0 && (
-          <p class="garden-empty">No notes published yet. Check back soon!</p>
+          <p class="garden-empty">
+            {opts.emptyMessage ?? "No notes published yet. Check back soon!"}
+          </p>
         )}
       </div>
     )

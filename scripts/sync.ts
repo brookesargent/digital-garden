@@ -83,7 +83,7 @@ function sync() {
   }
 
   // Clear content directory except static pages
-  const PRESERVED_FILES = ["index.md", "about.md"]
+  const PRESERVED_FILES = ["index.md", "about.md", "library.md"]
   if (fs.existsSync(CONTENT_PATH)) {
     const existing = fs.readdirSync(CONTENT_PATH)
     for (const file of existing) {
