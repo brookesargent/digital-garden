@@ -1,0 +1,41 @@
+.growth-stage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid var(--lightgray);
+  background-color: var(--highlight);
+
+  &[data-stage="seedling"] {
+    border-color: #a8d5a2;
+  }
+
+  &[data-stage="budding"] {
+    border-color: #7bb369;
+  }
+
+  &[data-stage="evergreen"] {
+    border-color: var(--secondary);
+  }
+}
+
+.growth-icon {
+  font-size: 1rem;
+}
+
+.growth-label {
+  font-weight: 500;
+}
+
+.growth-description {
+  color: var(--gray);
+  font-size: 0.8rem;
+  margin-left: 0.25rem;
+
+  &::before {
+    content: "\2014\00a0";
+  }
+}
