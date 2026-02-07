@@ -10,15 +10,15 @@
   background-color: var(--highlight);
 
   &[data-stage="seedling"] {
-    border-color: #a8d5a2;
+    border-color: var(--tertiary);
   }
 
   &[data-stage="budding"] {
-    border-color: #7bb369;
+    border-color: var(--secondary);
   }
 
   &[data-stage="evergreen"] {
-    border-color: var(--secondary);
+    border-color: var(--dark);
   }
 }
 
