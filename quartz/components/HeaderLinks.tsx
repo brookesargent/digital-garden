@@ -11,7 +11,7 @@ export default ((opts?: Options) => {
     return (
       <nav class={`header-links ${displayClass ?? ""}`}>
         {links.map(({ label, slug }) => (
-          <a href={resolveRelative(fileData.slug!, slug as FullSlug)} class="internal">
+          <a href={resolveRelative(fileData.slug!, slug as FullSlug)}>
             {label}
           </a>
         ))}

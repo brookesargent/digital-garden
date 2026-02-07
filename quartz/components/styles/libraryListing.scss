@@ -97,6 +97,21 @@
   color: var(--gray);
 }
 
+.book-rating {
+  display: flex;
+  gap: 1px;
+  margin-top: 0.15rem;
+}
+
+.star {
+  font-size: 0.75rem;
+  color: var(--lightgray);
+
+  &.filled {
+    color: var(--tertiary);
+  }
+}
+
 .library-empty {
   color: var(--gray);
   font-style: italic;

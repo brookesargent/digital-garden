@@ -17,6 +17,7 @@ books:
     cover: "https://covers.openlibrary.org/b/isbn/0525560092-L.jpg"
     url: "https://bookshop.org/p/books/the-empathy-diaries-a-memoir-sherry-turkle/14978654"
     shelf: recent
+    rating: 4
 ---
 
 Notes on things I'm reading, watching, and listening to — books, articles, podcasts, and more.

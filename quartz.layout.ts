@@ -4,7 +4,7 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [Component.HeaderLinks({ links: [{ label: "Library", slug: "library" }, { label: "About", slug: "about" }] })],
+  header: [Component.HeaderLinks({ links: [{ label: "Garden", slug: "index" }, { label: "Library", slug: "library" }, { label: "About", slug: "about" }] }), Component.Darkmode()],
   afterBody: [
     Component.GardenListing({
       slug: "index",
@@ -26,25 +26,21 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ArticleTitle(),
     Component.GrowthStage(),
-    Component.ContentMeta(),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => !["index", "library", "about"].includes(page.fileData.slug ?? ""),
+    }),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
+    Component.DesktopOnly(Component.Bio({
+      text: "Writing about gender, media criticism, engineering management, and whatever else catches my attention.",
+    })),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
+    Component.DesktopOnly(Component.Graph()),
   ],
   right: [
-    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -56,15 +52,6 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
   ],
   right: [],
 }

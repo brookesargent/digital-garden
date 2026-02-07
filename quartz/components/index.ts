@@ -27,6 +27,7 @@ import GrowthStage from "./GrowthStage"
 import GardenListing from "./GardenListing"
 import HeaderLinks from "./HeaderLinks"
 import LibraryListing from "./LibraryListing"
+import Bio from "./Bio"
 
 export {
   ArticleTitle,
@@ -58,4 +59,5 @@ export {
   GardenListing,
   HeaderLinks,
   LibraryListing,
+  Bio,
 }

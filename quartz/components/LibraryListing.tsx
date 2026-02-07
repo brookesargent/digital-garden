@@ -9,6 +9,7 @@ interface Book {
   cover: string
   url: string
   shelf: string
+  rating?: number
 }
 
 interface ShelfConfig {
@@ -45,12 +46,29 @@ export default (() => {
 
     const activeShelves = SHELVES.filter((s) => (shelved[s.key] ?? []).length > 0)
 
+    const renderStars = (rating: number) => {
+      const stars = []
+      for (let i = 1; i <= 5; i++) {
+        stars.push(
+          <span class={`star ${i <= rating ? "filled" : ""}`} aria-hidden="true">
+            {"\u2605"}
+          </span>,
+        )
+      }
+      return (
+        <span class="book-rating" aria-label={`${rating} out of 5 stars`}>
+          {stars}
+        </span>
+      )
+    }
+
     const renderBook = (book: Book) => (
       <a href={book.url} class="book-card" target="_blank" rel="noopener noreferrer">
         <img src={book.cover} alt={`Cover of ${book.title} by ${book.author}`} class="book-cover" loading="lazy" />
         <span class="book-info">
           <span class="book-title">{book.title}</span>
           <span class="book-author">{book.author}</span>
+          {book.rating != null && renderStars(book.rating)}
         </span>
       </a>
     )
