@@ -27,8 +27,8 @@ export default (() => {
         const fm = f.frontmatter
         if (!fm) return false
         if (fm.publish !== true && fm.publish !== "true") return false
-        // Exclude the index page itself from the listing
-        if (f.slug === "index") return false
+        // Exclude the index and about pages from the listing
+        if (f.slug === "index" || f.slug === "about") return false
         return true
       })
       .sort(byDateAndAlphabetical(cfg))

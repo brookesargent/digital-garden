@@ -82,11 +82,12 @@ function sync() {
     process.exit(1)
   }
 
-  // Clear content directory except index.md
+  // Clear content directory except static pages
+  const PRESERVED_FILES = ["index.md", "about.md"]
   if (fs.existsSync(CONTENT_PATH)) {
     const existing = fs.readdirSync(CONTENT_PATH)
     for (const file of existing) {
-      if (file === "index.md") continue
+      if (PRESERVED_FILES.includes(file)) continue
       const fullPath = path.join(CONTENT_PATH, file)
       fs.rmSync(fullPath, { recursive: true })
     }

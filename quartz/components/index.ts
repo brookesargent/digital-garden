@@ -25,6 +25,7 @@ import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 import GrowthStage from "./GrowthStage"
 import GardenListing from "./GardenListing"
+import HeaderLinks from "./HeaderLinks"
 
 export {
   ArticleTitle,
@@ -54,4 +55,5 @@ export {
   ConditionalRender,
   GrowthStage,
   GardenListing,
+  HeaderLinks,
 }
