@@ -1,7 +1,8 @@
 document.addEventListener("nav", () => {
-  const activeFilters: { status: Set<string>; tag: Set<string> } = {
+  const activeFilters: { status: Set<string>; tag: Set<string>; category: Set<string> } = {
     status: new Set(),
     tag: new Set(),
+    category: new Set(),
   }
 
   function applyFilters() {
@@ -9,13 +10,16 @@ document.addEventListener("nav", () => {
     cards.forEach((card) => {
       const cardTags = (card.dataset.tags || "").split(",").filter(Boolean)
       const cardStatus = card.dataset.status || ""
+      const cardCategory = card.dataset.category || ""
 
       const matchesStatus =
         activeFilters.status.size === 0 || activeFilters.status.has(cardStatus)
       const matchesTags =
         activeFilters.tag.size === 0 || cardTags.some((t) => activeFilters.tag.has(t))
+      const matchesCategory =
+        activeFilters.category.size === 0 || activeFilters.category.has(cardCategory)
 
-      card.style.display = matchesStatus && matchesTags ? "" : "none"
+      card.style.display = matchesStatus && matchesTags && matchesCategory ? "" : "none"
     })
   }
 
@@ -24,7 +28,7 @@ document.addEventListener("nav", () => {
     const handler = () => {
       const filterType = btn
         .closest("[data-filter-type]")
-        ?.getAttribute("data-filter-type") as "status" | "tag" | null
+        ?.getAttribute("data-filter-type") as "status" | "tag" | "category" | null
 
       if (!filterType) return
 

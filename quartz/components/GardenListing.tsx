@@ -33,9 +33,10 @@ export default (() => {
       })
       .sort(byDateAndAlphabetical(cfg))
 
-    // Collect unique tags and statuses
+    // Collect unique tags, statuses, and categories
     const allTags = new Set<string>()
     const allStatuses = new Set<string>()
+    const allCategories = new Set<string>()
 
     for (const file of publishedNotes) {
       const tags = file.frontmatter?.tags ?? []
@@ -46,15 +47,32 @@ export default (() => {
       if (status && ["seedling", "budding", "evergreen"].includes(status)) {
         allStatuses.add(status)
       }
+      const category = file.frontmatter?.category as string | undefined
+      if (category) {
+        allCategories.add(category)
+      }
     }
 
     const sortedTags = [...allTags].sort()
+    const sortedCategories = [...allCategories].sort()
     const statusOrder = ["seedling", "budding", "evergreen"]
     const sortedStatuses = statusOrder.filter((s) => allStatuses.has(s))
 
     return (
       <div class="garden-listing">
         <div class="garden-filters">
+          {sortedCategories.length > 0 && (
+            <div class="filter-group">
+              <span class="filter-label">Category:</span>
+              <div class="filter-buttons" data-filter-type="category">
+                {sortedCategories.map((category) => (
+                  <button class="filter-btn" data-filter-value={category}>
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           {sortedStatuses.length > 0 && (
             <div class="filter-group">
               <span class="filter-label">Growth:</span>
@@ -86,11 +104,12 @@ export default (() => {
             const title = file.frontmatter?.title ?? file.slug
             const tags = (file.frontmatter?.tags ?? []) as string[]
             const status = (file.frontmatter?.status as string) ?? ""
+            const category = (file.frontmatter?.category as string) ?? ""
             const href = resolveRelative(fileData.slug!, file.slug!)
             const description = file.description
 
             return (
-              <div class="garden-note-card" data-tags={tags.join(",")} data-status={status}>
+              <div class="garden-note-card" data-tags={tags.join(",")} data-status={status} data-category={category}>
                 <div class="note-card-header">
                   {status && GROWTH_EMOJI[status] && (
                     <span class="note-status-icon" aria-hidden="true">
