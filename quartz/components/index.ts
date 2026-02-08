@@ -28,6 +28,7 @@ import GardenListing from "./GardenListing"
 import HeaderLinks from "./HeaderLinks"
 import LibraryListing from "./LibraryListing"
 import Bio from "./Bio"
+import HeaderImage from "./HeaderImage"
 
 export {
   ArticleTitle,
@@ -60,4 +61,5 @@ export {
   HeaderLinks,
   LibraryListing,
   Bio,
+  HeaderImage,
 }

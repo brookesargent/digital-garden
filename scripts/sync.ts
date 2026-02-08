@@ -7,8 +7,10 @@ const VAULT_PATH =
   "/Users/brookesargent/Library/Mobile Documents/iCloud~md~obsidian/Documents/digital garden"
 
 const CONTENT_PATH = path.join(import.meta.dirname, "..", "content")
+const IMAGES_PATH = path.join(CONTENT_PATH, "images")
 
 const EXCLUDED_DIRS = ["5 - Templates", "4 - Indexes", "Excalidraw", ".obsidian", ".trash"]
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
 const TAG_LINE_REGEX = /^\*\*Tags:\*\*\s*(.+)$/m
 const WIKILINK_REGEX = /\[\[([^\]]+)\]\]/g
 
@@ -128,6 +130,21 @@ function sync() {
     const normalized = normalizeFrontmatter(frontmatter, filename)
     if (allTags.length > 0) {
       normalized.tags = allTags
+    }
+
+    // Copy image if referenced in frontmatter
+    const image = normalized.image as string | undefined
+    if (image && !image.startsWith("http")) {
+      const noteDir = path.dirname(filePath)
+      const imagePath = path.join(noteDir, image)
+      if (fs.existsSync(imagePath)) {
+        fs.mkdirSync(IMAGES_PATH, { recursive: true })
+        fs.copyFileSync(imagePath, path.join(IMAGES_PATH, path.basename(image)))
+        normalized.image = `images/${path.basename(image)}`
+        console.log(`    Copied image: ${image}`)
+      } else {
+        console.warn(`  WARNING: Image not found: ${imagePath}`)
+      }
     }
 
     // Reconstruct the file

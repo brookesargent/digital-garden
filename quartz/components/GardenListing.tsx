@@ -128,16 +128,22 @@ export default ((opts: GardenListingOptions) => {
             const tags = (file.frontmatter?.tags ?? []) as string[]
             const status = (file.frontmatter?.status as string) ?? ""
             const category = (file.frontmatter?.category as string) ?? ""
+            const image = (file.frontmatter?.image as string) ?? ""
             const href = resolveRelative(fileData.slug!, file.slug!)
             const description = file.description
 
             return (
               <div
-                class="garden-note-card"
+                class={`garden-note-card${image ? " has-thumbnail" : ""}`}
                 data-tags={tags.join(",")}
                 data-status={status}
                 data-category={category}
               >
+                {image && (
+                  <a href={href} class="note-card-thumbnail">
+                    <img src={image} alt="" loading="lazy" />
+                  </a>
+                )}
                 <div class="note-card-header">
                   {status && GROWTH_EMOJI[status] && (
                     <span class="note-status-icon" aria-hidden="true">

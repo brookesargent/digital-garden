@@ -36,6 +36,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.GrowthStage(),
+    Component.HeaderImage(),
     Component.ConditionalRender({
       component: Component.ContentMeta(),
       condition: (page) => !["index", "library", "about"].includes(page.fileData.slug ?? ""),
