@@ -9,4 +9,4 @@ i am a technologist, engineering manager, and chronic overthinker. this space is
 
 i write about what i'm learning and noticing in the world with topics typically orbiting around technology, engineering management, and my hobbies.
 
-hobbies include: baking & cooking, reading, growing a vegetable & herb garden, researching and learning about new topics.
+when i'm not learning and building, you can usually find me baking sourdough or cookies, reading a horror novel, or growing a few too many varieties of tomato.

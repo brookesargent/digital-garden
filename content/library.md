@@ -19,5 +19,3 @@ books:
     shelf: recent
     rating: 4
 ---
-
-a shelf of the books that have most influenced my thinking over times and a shelf of recently read books
