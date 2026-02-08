@@ -76,6 +76,9 @@ export default ((opts: GardenListingOptions) => {
 
     const showCategoryFilter = !opts.includeCategories && sortedCategories.length > 0
 
+    const noteCount = publishedNotes.length
+    const noteCountText = noteCount === 1 ? "1 note growing" : `${noteCount} notes growing`
+
     return (
       <div class="garden-listing">
         <div class="garden-filters">
@@ -116,6 +119,8 @@ export default ((opts: GardenListingOptions) => {
             </div>
           )}
         </div>
+
+        <p class="garden-stats">{noteCountText}</p>
 
         <div class="garden-notes">
           {publishedNotes.map((file) => {
