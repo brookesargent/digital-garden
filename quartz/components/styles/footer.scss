@@ -13,3 +13,22 @@ footer {
     margin-top: -1rem;
   }
 }
+
+.footer-icons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: -0.5rem;
+}
+
+.footer-icon {
+  color: var(--darkgray);
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--secondary);
+  }
+
+  svg {
+    display: block;
+  }
+}

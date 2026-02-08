@@ -20,4 +20,4 @@ books:
     rating: 4
 ---
 
-Notes on things I'm reading, watching, and listening to — books, articles, podcasts, and more.
+a shelf of the books that have most influenced my thinking over times and a shelf of recently read books

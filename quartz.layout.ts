@@ -13,7 +13,14 @@ export const sharedPageComponents: SharedLayout = {
     Component.LibraryListing(),
   ],
   footer: Component.Footer({
-    links: {},
+    links: {
+      rss: "/index.xml",
+      bluesky: "https://bsky.app/profile/brookesargent.bsky.social",
+      linkedin: "https://linkedin.com/in/brooke-sargent",
+      github: "https://github.com/brookesargent",
+      storygraph: "https://app.thestorygraph.com/profile/brooke",
+      letterboxd: "https://letterboxd.com/brookesarge",
+    },
   }),
 }
 
@@ -35,7 +42,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.DesktopOnly(Component.Bio({
-      text: "Writing about gender, media criticism, engineering management, and whatever else catches my attention.",
+      text: "Thinking and writing about technology, culture, engineering management, media, and whatever else catches my attention.",
     })),
     Component.MobileOnly(Component.Spacer()),
     Component.DesktopOnly(Component.Graph()),
