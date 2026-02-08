@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Left stem with leaves -->
+  <g fill="none" stroke="#5E7A62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <!-- Main stem 1 -->
+    <path d="M120 115 Q125 80, 130 50 Q132 35, 128 20"/>
+    <!-- Leaves on stem 1 -->
+    <path d="M130 50 Q145 42, 148 30 Q140 38, 130 50" fill="#5E7A62" fill-opacity="0.15"/>
+    <path d="M128 65 Q112 55, 108 42 Q115 52, 128 65" fill="#5E7A62" fill-opacity="0.15"/>
+    <path d="M126 35 Q115 25, 110 15 Q118 22, 126 35" fill="#5E7A62" fill-opacity="0.12"/>
+  </g>
+
+  <!-- Middle tall stem -->
+  <g fill="none" stroke="#5E7A62" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <path d="M185 115 Q188 75, 192 45 Q195 25, 190 8"/>
+    <!-- Leaves -->
+    <path d="M192 45 Q208 35, 215 22 Q205 32, 192 45" fill="#5E7A62" fill-opacity="0.15"/>
+    <path d="M190 30 Q175 18, 168 8 Q177 16, 190 30" fill="#5E7A62" fill-opacity="0.12"/>
+    <path d="M188 65 Q172 58, 165 48 Q174 55, 188 65" fill="#5E7A62" fill-opacity="0.15"/>
+    <path d="M190 80 Q205 72, 212 60 Q203 70, 190 80" fill="#5E7A62" fill-opacity="0.1"/>
+  </g>
+
+  <!-- Right stem with round leaves -->
+  <g fill="none" stroke="#8A7B5E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+    <path d="M255 115 Q258 85, 262 55 Q265 40, 260 25"/>
+    <!-- Rounder leaves -->
+    <path d="M262 55 Q278 48, 282 35 Q272 45, 262 55" fill="#8A7B5E" fill-opacity="0.12"/>
+    <path d="M260 40 Q245 30, 240 18 Q248 28, 260 40" fill="#8A7B5E" fill-opacity="0.1"/>
+    <path d="M258 75 Q242 68, 236 58 Q244 65, 258 75" fill="#8A7B5E" fill-opacity="0.12"/>
+  </g>
+
+  <!-- Small seedling on the left -->
+  <g fill="none" stroke="#5E7A62" stroke-width="1.2" stroke-linecap="round" opacity="0.5">
+    <path d="M80 115 Q82 100, 85 90"/>
+    <path d="M85 90 Q92 82, 96 78 Q90 83, 85 90" fill="#5E7A62" fill-opacity="0.15"/>
+    <path d="M85 90 Q78 82, 74 78 Q80 83, 85 90" fill="#5E7A62" fill-opacity="0.12"/>
+  </g>
+
+  <!-- Small fern frond on the right -->
+  <g fill="none" stroke="#8A7B5E" stroke-width="1.2" stroke-linecap="round" opacity="0.5">
+    <path d="M310 115 Q315 95, 318 75 Q320 65, 316 55"/>
+    <path d="M318 75 Q328 70, 332 63 Q325 68, 318 75" fill="#8A7B5E" fill-opacity="0.1"/>
+    <path d="M316 65 Q308 58, 304 52 Q310 56, 316 65" fill="#8A7B5E" fill-opacity="0.1"/>
+    <path d="M317 85 Q326 80, 330 74 Q324 78, 317 85" fill="#8A7B5E" fill-opacity="0.1"/>
+  </g>
+</svg>
