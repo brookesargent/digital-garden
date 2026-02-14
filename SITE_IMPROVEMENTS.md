@@ -7,7 +7,6 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 ## Medium Impact
 
-- **`aria-current="page"` on active nav link.** ⭐ The Garden/Library/About nav links don't indicate which page you're currently on for screen readers. Quick accessibility fix in the HeaderLinks component.
 
 ## Lower Impact / Future Ideas
 
@@ -38,3 +37,4 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~Mobile audit~~ — converted filter bar from pill buttons to compact dropdown menus
 - ~~Custom 404 page~~ — garden-themed copy for missing pages
 - ~~Add explicit descriptions to post frontmatter~~ — custom descriptions for OG cards, meta tags, and garden listing cards
+- ~~`aria-current="page"` on active nav link~~ — screen readers now announce the current page in navigation

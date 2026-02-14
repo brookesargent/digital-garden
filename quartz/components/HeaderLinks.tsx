@@ -10,11 +10,17 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? []
     return (
       <nav class={`header-links ${displayClass ?? ""}`}>
-        {links.map(({ label, slug }) => (
-          <a href={resolveRelative(fileData.slug!, slug as FullSlug)}>
-            {label}
-          </a>
-        ))}
+        {links.map(({ label, slug }) => {
+          const isCurrent = fileData.slug === slug || fileData.slug === slug + "/index"
+          return (
+            <a
+              href={resolveRelative(fileData.slug!, slug as FullSlug)}
+              {...(isCurrent ? { "aria-current": "page" } : {})}
+            >
+              {label}
+            </a>
+          )
+        })}
       </nav>
     )
   }
