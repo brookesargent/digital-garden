@@ -62,6 +62,9 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
+    Component.DesktopOnly(Component.Bio({
+      text: "Thinking and writing about technology, culture, engineering management, media, and whatever else catches my attention.",
+    })),
     Component.MobileOnly(Component.Spacer()),
   ],
   right: [],

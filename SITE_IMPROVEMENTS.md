@@ -4,7 +4,6 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 - **Publish more notes.** The single biggest thing that will make the site feel alive. Even 3-5 seedlings across your categories (essay, note, share) would demonstrate the filtering system, populate the graph, and show visitors the range of your thinking. The infrastructure is excellent — it needs plants.
 - **Add outward links to the About page.** The About copy is good now — it has personality and specificity ("chronic overthinker," "a few too many varieties of tomato"). But it's a dead end. Someone who resonates with your writing has no thread to pull. End with a casual line linking to Bluesky or an email, something like: "say hi on [bluesky](url) or send me an email." The footer icons exist but people don't always scroll down.
-- **Tag pages need love.** Clicking a tag from a note card leads to a page with no graph, no bio, no sidebar context. It's a jarring visual shift from the rest of the site. Adding the graph and bio to `defaultListPageLayout` would make tag pages feel like part of the same garden instead of a backend admin page.
 - **Mobile audit.** The filter bar on the Garden page could get crowded as categories, growth stages, and tags multiply. Worth testing on a phone now while there's only one note, and adjusting the filter layout (maybe collapsible or horizontally scrollable) before it becomes a problem.
 
 ## Medium Impact
@@ -34,3 +33,4 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~"What is a digital garden?" explainer~~ — index links to "Why a Digital Garden?" essay
 - ~~Check Open Graph / social preview cards~~ — verified palette, added category & status badges to generated OG images
 - ~~Add analytics (Umami)~~ — Umami Cloud free tier, enabled via built-in Quartz support
+- ~~Tag pages need love~~ — added bio sidebar to list page layout
