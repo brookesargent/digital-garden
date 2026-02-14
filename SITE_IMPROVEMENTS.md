@@ -7,7 +7,6 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 ## Medium Impact
 
-- **Add explicit `description` to post frontmatter.** Descriptions are currently auto-generated from the first paragraph. Writing intentional 1-2 sentence descriptions gives better control over social card previews and search results.
 - **`aria-current="page"` on active nav link.** ⭐ The Garden/Library/About nav links don't indicate which page you're currently on for screen readers. Quick accessibility fix in the HeaderLinks component.
 
 ## Lower Impact / Future Ideas
@@ -38,3 +37,4 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~Tag pages need love~~ — added bio sidebar to list page layout
 - ~~Mobile audit~~ — converted filter bar from pill buttons to compact dropdown menus
 - ~~Custom 404 page~~ — garden-themed copy for missing pages
+- ~~Add explicit descriptions to post frontmatter~~ — custom descriptions for OG cards, meta tags, and garden listing cards
