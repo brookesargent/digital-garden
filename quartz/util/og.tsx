@@ -195,6 +195,8 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
 
   // Get tags if available
   const tags = fileData.frontmatter?.tags ?? []
+  const category = fileData.frontmatter?.category as string | undefined
+  const status = fileData.frontmatter?.status as string | undefined
   const bodyFont = getFontSpecificationName(cfg.theme.typography.body)
   const headerFont = getFontSpecificationName(cfg.theme.typography.header)
 
@@ -241,11 +243,54 @@ export const defaultImage: SocialImageOptions["imageStructure"] = ({
         </div>
       </div>
 
+      {/* Category & Status Badges */}
+      {(category || status) && (
+        <div
+          style={{
+            display: "flex",
+            gap: "0.75rem",
+            marginTop: "1rem",
+            marginBottom: "0.5rem",
+          }}
+        >
+          {category && (
+            <div
+              style={{
+                display: "flex",
+                padding: "0.35rem 1rem",
+                backgroundColor: cfg.theme.colors[colorScheme].highlight,
+                color: cfg.theme.colors[colorScheme].secondary,
+                borderRadius: "10px",
+                fontSize: 24,
+                fontFamily: bodyFont,
+              }}
+            >
+              {category}
+            </div>
+          )}
+          {status && (
+            <div
+              style={{
+                display: "flex",
+                padding: "0.35rem 1rem",
+                backgroundColor: cfg.theme.colors[colorScheme].highlight,
+                color: cfg.theme.colors[colorScheme].secondary,
+                borderRadius: "10px",
+                fontSize: 24,
+                fontFamily: bodyFont,
+              }}
+            >
+              {status}
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Title Section */}
       <div
         style={{
           display: "flex",
-          marginTop: "1rem",
+          marginTop: "0.5rem",
           marginBottom: "1.5rem",
         }}
       >
