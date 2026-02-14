@@ -106,9 +106,22 @@
 .star {
   font-size: 0.75rem;
   color: var(--lightgray);
+  position: relative;
 
   &.filled {
     color: var(--tertiary);
+  }
+
+  &.half {
+    color: var(--lightgray);
+
+    &::before {
+      content: "\2605";
+      position: absolute;
+      left: 0;
+      color: var(--tertiary);
+      clip-path: inset(0 50% 0 0);
+    }
   }
 }
 

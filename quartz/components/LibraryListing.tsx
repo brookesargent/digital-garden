@@ -47,13 +47,23 @@ export default (() => {
     const activeShelves = SHELVES.filter((s) => (shelved[s.key] ?? []).length > 0)
 
     const renderStars = (rating: number) => {
+      const fullStars = Math.floor(rating)
+      const hasHalf = rating % 1 >= 0.5
       const stars = []
       for (let i = 1; i <= 5; i++) {
-        stars.push(
-          <span class={`star ${i <= rating ? "filled" : ""}`} aria-hidden="true">
-            {"\u2605"}
-          </span>,
-        )
+        if (i <= fullStars) {
+          stars.push(
+            <span class="star filled" aria-hidden="true">{"\u2605"}</span>,
+          )
+        } else if (i === fullStars + 1 && hasHalf) {
+          stars.push(
+            <span class="star half" aria-hidden="true">{"\u2605"}</span>,
+          )
+        } else {
+          stars.push(
+            <span class="star" aria-hidden="true">{"\u2605"}</span>,
+          )
+        }
       }
       return (
         <span class="book-rating" aria-label={`${rating} out of 5 stars`}>
