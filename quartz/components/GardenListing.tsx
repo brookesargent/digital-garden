@@ -83,11 +83,13 @@ export default ((opts: GardenListingOptions) => {
       <div class="garden-listing">
         <div class="garden-filters">
           {showCategoryFilter && (
-            <div class="filter-group">
-              <span class="filter-label">Category:</span>
-              <div class="filter-buttons" data-filter-type="category">
+            <div class="filter-dropdown" data-filter-type="category">
+              <button class="filter-dropdown-trigger">
+                Category <span class="filter-count"></span>
+              </button>
+              <div class="filter-dropdown-menu">
                 {sortedCategories.map((category) => (
-                  <button class="filter-btn" data-filter-value={category}>
+                  <button class="filter-option" data-filter-value={category}>
                     {category}
                   </button>
                 ))}
@@ -95,11 +97,13 @@ export default ((opts: GardenListingOptions) => {
             </div>
           )}
           {sortedStatuses.length > 0 && (
-            <div class="filter-group">
-              <span class="filter-label">Growth:</span>
-              <div class="filter-buttons" data-filter-type="status">
+            <div class="filter-dropdown" data-filter-type="status">
+              <button class="filter-dropdown-trigger">
+                Growth <span class="filter-count"></span>
+              </button>
+              <div class="filter-dropdown-menu">
                 {sortedStatuses.map((status) => (
-                  <button class="filter-btn" data-filter-value={status}>
+                  <button class="filter-option" data-filter-value={status}>
                     {GROWTH_EMOJI[status]} {status}
                   </button>
                 ))}
@@ -107,11 +111,13 @@ export default ((opts: GardenListingOptions) => {
             </div>
           )}
           {sortedTags.length > 0 && (
-            <div class="filter-group">
-              <span class="filter-label">Topics:</span>
-              <div class="filter-buttons" data-filter-type="tag">
+            <div class="filter-dropdown" data-filter-type="tag">
+              <button class="filter-dropdown-trigger">
+                Topics <span class="filter-count"></span>
+              </button>
+              <div class="filter-dropdown-menu">
                 {sortedTags.map((tag) => (
-                  <button class="filter-btn" data-filter-value={tag}>
+                  <button class="filter-option" data-filter-value={tag}>
                     {tag}
                   </button>
                 ))}

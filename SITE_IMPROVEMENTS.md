@@ -4,7 +4,6 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 - **Publish more notes.** The single biggest thing that will make the site feel alive. Even 3-5 seedlings across your categories (essay, note, share) would demonstrate the filtering system, populate the graph, and show visitors the range of your thinking. The infrastructure is excellent — it needs plants.
 - **Add outward links to the About page.** The About copy is good now — it has personality and specificity ("chronic overthinker," "a few too many varieties of tomato"). But it's a dead end. Someone who resonates with your writing has no thread to pull. End with a casual line linking to Bluesky or an email, something like: "say hi on [bluesky](url) or send me an email." The footer icons exist but people don't always scroll down.
-- **Mobile audit.** The filter bar on the Garden page could get crowded as categories, growth stages, and tags multiply. Worth testing on a phone now while there's only one note, and adjusting the filter layout (maybe collapsible or horizontally scrollable) before it becomes a problem.
 
 ## Medium Impact
 
@@ -34,3 +33,4 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~Check Open Graph / social preview cards~~ — verified palette, added category & status badges to generated OG images
 - ~~Add analytics (Umami)~~ — Umami Cloud free tier, enabled via built-in Quartz support
 - ~~Tag pages need love~~ — added bio sidebar to list page layout
+- ~~Mobile audit~~ — converted filter bar from pill buttons to compact dropdown menus

@@ -23,29 +23,78 @@ document.addEventListener("nav", () => {
     })
   }
 
-  const filterBtns = document.querySelectorAll(".garden-listing .filter-btn")
-  filterBtns.forEach((btn) => {
-    const handler = () => {
-      const filterType = btn
-        .closest("[data-filter-type]")
-        ?.getAttribute("data-filter-type") as "status" | "tag" | "category" | null
+  function updateTrigger(dropdown: Element) {
+    const filterType = dropdown.getAttribute("data-filter-type") as
+      | "status"
+      | "tag"
+      | "category"
+      | null
+    if (!filterType) return
 
+    const count = activeFilters[filterType].size
+    const countEl = dropdown.querySelector(".filter-count")
+    if (countEl) {
+      countEl.textContent = count > 0 ? String(count) : ""
+    }
+    dropdown.classList.toggle("has-active", count > 0)
+  }
+
+  // Dropdown trigger: open/close menu
+  const triggers = document.querySelectorAll(".garden-listing .filter-dropdown-trigger")
+  triggers.forEach((trigger) => {
+    const handler = (e: Event) => {
+      e.stopPropagation()
+      const dropdown = trigger.closest(".filter-dropdown")!
+      const wasOpen = dropdown.classList.contains("open")
+
+      // Close all dropdowns
+      document.querySelectorAll(".filter-dropdown.open").forEach((d) => d.classList.remove("open"))
+
+      // Toggle this one
+      if (!wasOpen) {
+        dropdown.classList.add("open")
+      }
+    }
+
+    trigger.addEventListener("click", handler)
+    window.addCleanup(() => trigger.removeEventListener("click", handler))
+  })
+
+  // Option click: toggle filter
+  const options = document.querySelectorAll(".garden-listing .filter-option")
+  options.forEach((option) => {
+    const handler = (e: Event) => {
+      e.stopPropagation()
+      const dropdown = option.closest(".filter-dropdown")!
+      const filterType = dropdown.getAttribute("data-filter-type") as
+        | "status"
+        | "tag"
+        | "category"
+        | null
       if (!filterType) return
 
-      const value = btn.getAttribute("data-filter-value") || ""
+      const value = option.getAttribute("data-filter-value") || ""
 
       if (activeFilters[filterType].has(value)) {
         activeFilters[filterType].delete(value)
-        btn.classList.remove("active")
+        option.classList.remove("active")
       } else {
         activeFilters[filterType].add(value)
-        btn.classList.add("active")
+        option.classList.add("active")
       }
 
+      updateTrigger(dropdown)
       applyFilters()
     }
 
-    btn.addEventListener("click", handler)
-    window.addCleanup(() => btn.removeEventListener("click", handler))
+    option.addEventListener("click", handler)
+    window.addCleanup(() => option.removeEventListener("click", handler))
   })
+
+  // Click outside: close all dropdowns
+  const outsideHandler = () => {
+    document.querySelectorAll(".filter-dropdown.open").forEach((d) => d.classList.remove("open"))
+  }
+  document.addEventListener("click", outsideHandler)
+  window.addCleanup(() => document.removeEventListener("click", outsideHandler))
 })

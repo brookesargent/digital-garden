@@ -11,53 +11,106 @@
 
 .garden-filters {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--lightgray);
 }
 
-.filter-group {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+.filter-dropdown {
+  position: relative;
 }
 
-.filter-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--darkgray);
-  min-width: 60px;
-}
-
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.filter-btn {
+.filter-dropdown-trigger {
   background: var(--light);
   border: 1px solid var(--lightgray);
   border-radius: 1rem;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.8rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
   cursor: pointer;
   color: var(--darkgray);
   transition: all 0.15s ease;
   font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  &::after {
+    content: "▾";
+    font-size: 0.7rem;
+    opacity: 0.6;
+  }
 
   &:hover {
     border-color: var(--secondary);
     color: var(--secondary);
   }
 
-  &.active {
+  .filter-count {
+    &:empty {
+      display: none;
+    }
+
     background: var(--secondary);
     color: var(--light);
-    border-color: var(--secondary);
+    font-size: 0.7rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 1rem;
+    font-weight: 600;
+  }
+}
+
+.filter-dropdown.has-active > .filter-dropdown-trigger {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.filter-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 10;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 140px;
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.25rem;
+  flex-direction: column;
+
+  .filter-dropdown.open & {
+    display: flex;
+  }
+}
+
+.filter-option {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--darkgray);
+  text-align: left;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  transition: background 0.1s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background: var(--highlight);
+  }
+
+  &.active {
+    color: var(--secondary);
+    font-weight: 600;
+
+    &::before {
+      content: "✓ ";
+    }
   }
 }
 
