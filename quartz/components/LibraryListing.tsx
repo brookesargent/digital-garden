@@ -21,7 +21,7 @@ interface ShelfConfig {
 const SHELVES: ShelfConfig[] = [
   {
     key: "favorites",
-    label: "Favorites & Influential",
+    label: "Influential Favorites",
     description: "Books that have shaped my thinking",
   },
   {

@@ -7,6 +7,16 @@ books:
     cover: "https://covers.openlibrary.org/b/isbn/9781620975879-L.jpg"
     url: "https://bookshop.org/p/books/thick-and-other-essays-tressie-mcmillan-cottom/e5d11fbf310d1738"
     shelf: favorites
+  - title: "Resilient Management"
+    author: "Lara Hogan"
+    cover: "https://covers.openlibrary.org/b/isbn/9781937557829-L.jpg"
+    url: "https://bookshop.org/p/books/resilient-management-lara-hogan/70bde813cd8f0aa1"
+    shelf: favorites
+  - title: "In the Dream House"
+    author: "Carmen Maria Machado"
+    cover: "https://covers.openlibrary.org/b/isbn/9781644450383-L.jpg"
+    url: "https://bookshop.org/p/books/in-the-dream-house-a-memoir-carmen-maria-machado/16645986"
+    shelf: favorites
   - title: "Four Thousand Weeks"
     author: "Oliver Burkeman"
     cover: "https://covers.openlibrary.org/b/isbn/0374159122-L.jpg"
@@ -14,23 +24,13 @@ books:
     shelf: favorites
   - title: "The Safekeep"
     author: "Yael van der Wouden"
-    cover: "https://covers.openlibrary.org/b/isbn/9781668034354-L.jpg"
+    cover: "https://covers.openlibrary.org/b/isbn/9781668034347-L.jpg"
     url: "https://bookshop.org/p/books/the-safekeep-yael-van-der-wouden/20713108"
-    shelf: favorites
-  - title: "In the Dream House"
-    author: "Carmen Maria Machado"
-    cover: "https://covers.openlibrary.org/b/isbn/9781644450383-L.jpg"
-    url: "https://bookshop.org/p/books/in-the-dream-house-a-memoir-carmen-maria-machado/16645986"
     shelf: favorites
   - title: "Homegoing"
     author: "Yaa Gyasi"
     cover: "https://covers.openlibrary.org/b/isbn/9781101971062-L.jpg"
     url: "https://bookshop.org/p/books/homegoing-yaa-gyasi/f2e4df8dc164294a"
-    shelf: favorites
-  - title: "Resilient Management"
-    author: "Lara Hogan"
-    cover: "https://covers.openlibrary.org/b/isbn/9781937557829-L.jpg"
-    url: "https://bookshop.org/p/books/resilient-management-lara-hogan/70bde813cd8f0aa1"
     shelf: favorites
   - title: "A Room of One's Own"
     author: "Virginia Woolf"
