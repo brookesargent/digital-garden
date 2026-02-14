@@ -18,7 +18,7 @@ const config: QuartzConfig = {
       host: "https://cloud.umami.is",
     },
     locale: "en-US",
-    baseUrl: "brookesargent.github.io/digital-garden",
+    baseUrl: "brookesargent.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
