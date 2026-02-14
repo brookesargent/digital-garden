@@ -7,8 +7,6 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 ## Medium Impact
 
-- **Comment system (Cusdis).** Adding a lightweight comment section to notes so visitors can engage with your ideas. [Cusdis](https://cusdis.com) is a privacy-friendly, open-source alternative to Disqus (~5kb). No account required for commenters, comments require your approval before appearing, and it's free to use hosted or self-host. Implementation: sign up for an app ID, build a small Quartz component that embeds the widget on note pages, wire it into the layout. Fits the garden ethos — tending to conversations, not just content.
-- **Custom 404 page.** When someone hits a dead link (especially wikilinks to unpublished notes), a garden-themed 404 ("this seed hasn't sprouted yet — try browsing the garden instead") reinforces the vibe and gives visitors a way back.
 
 ## Lower Impact / Future Ideas
 
@@ -18,6 +16,7 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - **Consider half-star rendering for ratings.** You have a 4.5 rating on Bat Eater but the stars component only renders whole stars (it shows 4 out of 5). A half-star or fractional display would be more precise.
 - **Pagination / "show more" for garden listing.** Currently all published notes render at once on the index page. This is fine for now — filters help narrow things down and most gardens with 50+ notes still show everything. But once the page starts feeling long, a "show more" button that reveals notes beyond the first ~12 would keep the initial view tidy without hiding content behind traditional pagination.
 - **Botanical illustration on index may need revisiting.** It looks nice now, but once you have 10+ note cards below it, the page might feel top-heavy. Revisit whether it still earns its space once the garden is fuller. Could also consider making it smaller or moving it to a more subtle position.
+- **Comment system (Cusdis).** Adding a lightweight comment section to notes so visitors can engage with your ideas. [Cusdis](https://cusdis.com) is a privacy-friendly, open-source alternative to Disqus (~5kb). No account required for commenters, comments require your approval before appearing, and it's free to use hosted or self-host. Implementation: sign up for an app ID, build a small Quartz component that embeds the widget on note pages, wire it into the layout.
 
 ## Completed
 
@@ -34,3 +33,4 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~Add analytics (Umami)~~ — Umami Cloud free tier, enabled via built-in Quartz support
 - ~~Tag pages need love~~ — added bio sidebar to list page layout
 - ~~Mobile audit~~ — converted filter bar from pill buttons to compact dropdown menus
+- ~~Custom 404 page~~ — garden-themed copy for missing pages

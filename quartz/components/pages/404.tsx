@@ -13,6 +13,7 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
       <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
     </article>
   )
+
 }
 
 export default (() => NotFound) satisfies QuartzComponentConstructor
