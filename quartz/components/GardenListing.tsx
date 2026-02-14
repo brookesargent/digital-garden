@@ -8,8 +8,8 @@ import script from "./scripts/gardenListing.inline"
 
 const GROWTH_EMOJI: Record<string, string> = {
   seedling: "\u{1F331}",
-  budding: "\u{1FAB4}",
-  evergreen: "\u{1F333}",
+  growing: "\u{1F33F}",
+  perennial: "\u{1FAB4}",
 }
 
 interface GardenListingOptions {
@@ -60,7 +60,7 @@ export default ((opts: GardenListingOptions) => {
         allTags.add(tag as string)
       }
       const status = file.frontmatter?.status as string | undefined
-      if (status && ["seedling", "budding", "evergreen"].includes(status)) {
+      if (status && ["seedling", "growing", "perennial"].includes(status)) {
         allStatuses.add(status)
       }
       const category = file.frontmatter?.category as string | undefined
@@ -71,13 +71,13 @@ export default ((opts: GardenListingOptions) => {
 
     const sortedTags = [...allTags].sort()
     const sortedCategories = [...allCategories].sort()
-    const statusOrder = ["seedling", "budding", "evergreen"]
+    const statusOrder = ["seedling", "growing", "perennial"]
     const sortedStatuses = statusOrder.filter((s) => allStatuses.has(s))
 
     const showCategoryFilter = !opts.includeCategories && sortedCategories.length > 0
 
     const noteCount = publishedNotes.length
-    const noteCountText = noteCount === 1 ? "1 note growing" : `${noteCount} notes growing`
+    const noteCountText = noteCount === 1 ? "1 note cultivating" : `${noteCount} notes cultivating`
 
     return (
       <div class="garden-listing">

@@ -8,15 +8,15 @@ const GROWTH_STAGES: Record<string, { emoji: string; label: string; description:
     label: "Seedling",
     description: "A young idea, just planted",
   },
-  budding: {
-    emoji: "\u{1FAB4}",
-    label: "Budding",
-    description: "Growing and taking shape",
+  growing: {
+    emoji: "\u{1F33F}",
+    label: "Growing",
+    description: "Taking root and developing",
   },
-  evergreen: {
-    emoji: "\u{1F333}",
-    label: "Evergreen",
-    description: "A well-developed, stable note",
+  perennial: {
+    emoji: "\u{1FAB4}",
+    label: "Perennial",
+    description: "A hardy, well-established note",
   },
 }
 

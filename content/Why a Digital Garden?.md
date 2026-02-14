@@ -1,6 +1,6 @@
 ---
 created: '2026-02-08 09:33'
-status: budding
+status: growing
 publish: 'true'
 publish-date: null
 category: essay

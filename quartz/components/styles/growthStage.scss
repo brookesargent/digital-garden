@@ -13,11 +13,11 @@
     border-color: var(--tertiary);
   }
 
-  &[data-stage="budding"] {
+  &[data-stage="growing"] {
     border-color: var(--secondary);
   }
 
-  &[data-stage="evergreen"] {
+  &[data-stage="perennial"] {
     border-color: var(--dark);
   }
 }
