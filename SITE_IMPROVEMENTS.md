@@ -7,6 +7,8 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 ## Medium Impact
 
+- **Add explicit `description` to post frontmatter.** Descriptions are currently auto-generated from the first paragraph. Writing intentional 1-2 sentence descriptions gives better control over social card previews and search results.
+- **`aria-current="page"` on active nav link.** ⭐ The Garden/Library/About nav links don't indicate which page you're currently on for screen readers. Quick accessibility fix in the HeaderLinks component.
 
 ## Lower Impact / Future Ideas
 
@@ -17,6 +19,8 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - **Pagination / "show more" for garden listing.** Currently all published notes render at once on the index page. This is fine for now — filters help narrow things down and most gardens with 50+ notes still show everything. But once the page starts feeling long, a "show more" button that reveals notes beyond the first ~12 would keep the initial view tidy without hiding content behind traditional pagination.
 - **Botanical illustration on index may need revisiting.** It looks nice now, but once you have 10+ note cards below it, the page might feel top-heavy. Revisit whether it still earns its space once the garden is fuller. Could also consider making it smaller or moving it to a more subtle position.
 - **Comment system (Cusdis).** Adding a lightweight comment section to notes so visitors can engage with your ideas. [Cusdis](https://cusdis.com) is a privacy-friendly, open-source alternative to Disqus (~5kb). No account required for commenters, comments require your approval before appearing, and it's free to use hosted or self-host. Implementation: sign up for an app ID, build a small Quartz component that embeds the widget on note pages, wire it into the layout.
+- **Webmentions via Bridgy.** Display Bluesky likes, reposts, and replies on posts (like Maggie Appleton's site). [Bridgy](https://brid.gy) bridges social interactions into webmentions. Only worth implementing if posts are getting shared and there's engagement to show.
+- **"Start Here" section on the homepage.** Once there are 8-10+ notes, a curated entry point with 2-3 recommended posts would help new visitors. Not needed until there's enough content to warrant curation.
 
 ## Completed
 

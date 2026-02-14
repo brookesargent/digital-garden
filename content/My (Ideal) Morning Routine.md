@@ -5,6 +5,7 @@ publish: 'true'
 publish-date: null
 audience: public
 category: note
+description: The routine that helps me show up as the best version of myself.
 title: My (Ideal) Morning Routine
 modified: '2026-02-08 15:42'
 tags:

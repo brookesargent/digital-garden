@@ -1,9 +1,12 @@
 ---
 created: '2026-02-08 09:33'
-status: growing
+status: budding
 publish: 'true'
 publish-date: null
 category: essay
+description: >-
+  How burnout and doomscrolling led me to digital gardening as a path to slower,
+  more intentional thinking and writing.
 title: Why a Digital Garden?
 modified: '2026-02-08 09:33'
 tags:

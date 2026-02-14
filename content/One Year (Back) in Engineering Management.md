@@ -1,9 +1,12 @@
 ---
 created: '2026-02-14 06:13'
-status: perennial
+status: evergreen
 publish: 'true'
 publish-date: null
 category: essay
+description: >-
+  Reflecting on one year back on the management track. What felt familiar and
+  what surprised me.
 title: One Year (Back) in Engineering Management
 modified: '2026-02-14 06:13'
 tags:
