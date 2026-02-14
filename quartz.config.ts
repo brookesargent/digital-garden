@@ -12,7 +12,11 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: null,
+    analytics: {
+      provider: "umami",
+      websiteId: "246f4f4a-dc7f-4e7c-a3f2-2eed00a372d7",
+      host: "https://cloud.umami.is",
+    },
     locale: "en-US",
     baseUrl: "brookesargent.github.io/digital-garden",
     ignorePatterns: ["private", "templates", ".obsidian"],

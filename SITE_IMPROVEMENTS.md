@@ -9,9 +9,7 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 
 ## Medium Impact
 
-- **Add analytics (Umami).** Sign up for Umami Cloud free tier, add the tracking script to `Head.tsx`. Gives pageviews, referrers, UTM campaign tracking, time on page, and returning visitor stats — useful for understanding reach when sharing links.
 - **Comment system (Cusdis).** Adding a lightweight comment section to notes so visitors can engage with your ideas. [Cusdis](https://cusdis.com) is a privacy-friendly, open-source alternative to Disqus (~5kb). No account required for commenters, comments require your approval before appearing, and it's free to use hosted or self-host. Implementation: sign up for an app ID, build a small Quartz component that embeds the widget on note pages, wire it into the layout. Fits the garden ethos — tending to conversations, not just content.
-- **Check Open Graph / social preview cards.** Before sharing the site link publicly (Bluesky, LinkedIn), paste the URL into a social card previewer. `CustomOgImages` is enabled but the generated cards may not match the forest palette. First impressions matter when someone shares your essay.
 - **Custom 404 page.** When someone hits a dead link (especially wikilinks to unpublished notes), a garden-themed 404 ("this seed hasn't sprouted yet — try browsing the garden instead") reinforces the vibe and gives visitors a way back.
 
 ## Lower Impact / Future Ideas
@@ -34,3 +32,5 @@ Prioritized from most impactful to least. Items marked with a star are quick win
 - ~~Add footer links~~ — RSS, Bluesky, LinkedIn, GitHub, StoryGraph, Letterboxd
 - ~~Note count / garden stats~~ — "X notes growing" below filter bar on index
 - ~~"What is a digital garden?" explainer~~ — index links to "Why a Digital Garden?" essay
+- ~~Check Open Graph / social preview cards~~ — verified palette, added category & status badges to generated OG images
+- ~~Add analytics (Umami)~~ — Umami Cloud free tier, enabled via built-in Quartz support
