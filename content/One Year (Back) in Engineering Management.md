@@ -27,7 +27,7 @@ Things like getting 7-8h good sleep each night, moving your body regularly, eati
 ### What Was New
 
 This past year was one of near-constant change, certainly more change than I'd experienced in my previous EM stint. People and priorities shifted throughout the year with a throughline of complex cross-team work that needed to be orchestrated. I got to participate in a coaching program this year that provided 360 feedback from my team and that feedback highlighted that my team was perceiving me as a calm, transparent manager who set appropriate context without fretting too much about all the change. In retrospect, I think I was able to show up that way because I _was_ spending cycles worrying about all of the change internally.
-#### IC Instincts Without an Outlet
+#### Instincts Without an Outlet
 
 Worrying and overthinking wasn't new for me, but something about how it manifested felt different this time, specific to this transition. Removing the comfort and predictability of writing code and shipping software from my responsibilities changed a lot more about how I experienced management than I expected. Writing code has a certain predictability to it. I think I found solace in that the first time around. Taking that piece away means a lot more of the work is prone to unpredictability and, at least for me, the instincts I'd built as an IC weren't always helpful in dealing with that.
 
@@ -35,15 +35,15 @@ For example, as an IC, if you sit with a problem long enough you'll generally fi
 
 As an IC, if I cared enough about something I could just... do it. Start the day a little earlier, write the code, ship the thing. Drag it across the finish line. This intensity of caring doesn't translate to a manager's ability to achieve an outcome. But at the same time, these instincts don't just stop firing because they're not useful anymore. They generate stress that has nowhere to go.
 
-#### Where the Stress Goes
+#### Holding Stress
 
 This stress led to a pattern a couple of times over the past year where I was dealing with a challenging interpersonal situation or a complex cross-team ownership decision and I would sit with it, think about it from all angles, generate an action plan, revise the action plan multiple times over and then... poof. The situations resolved themselves through factors external to myself. All this stress and buildup for nothing. 
 
 This rumination didn't just happen through the work day either. I was stewing on these situations and what I should do as I unloaded the dishwasher or walked my dog. It wasn't sustainable, especially with the pattern of constant change where there often was something new to stew about. 
 
-So on one hand, thinking through things intensely in this way is, I think, why my team perceives me as a calm manager who has things under control. Part of the job _is_ absorbing uncertainty so your team doesn't have to after all. Things like thinking through how a potential priority shift would or wouldn't impact the team's work or how our scope of ownership might need to adjust after a reorg. On the other hand, I was giving too much of myself to these thoughts, especially when the workday was over. I worried if I continued on this path I'd be prone to burnout.
+So on one hand, thinking through things intensely in this way is, I think, why my team perceives me as a calm manager who has things under control. Part of the job _is_ absorbing uncertainty so your team doesn't always have to. Things like thinking through how a potential priority shift would or wouldn't impact the team's work or how scope of ownership might need to adjust after reorg. On the other hand, I was giving too much of myself to these thoughts, especially when the workday was over. I worried if I continued on this path I'd be prone to burnout.
 
-#### What I Learned to Do Differently
+#### Making It Sustainable
 
 Timeboxing is an idea I've been familiar with for years but really only used for technical problems. A tricky bug that's a middling priority? Spend an hour or two to see if you can resolve it and if not, take some notes about what you learned and drop it. 
 
