@@ -6,7 +6,7 @@ publish-date: null
 audience: public
 category: null
 image: images/marigold-tarot-death-wide.png
-title: Why the Death Card is My Favorite Tarot Pull
+title: Pulling Death
 modified: '2026-03-11 07:50'
 tags:
   - tarot
